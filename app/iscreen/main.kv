@@ -1,0 +1,55 @@
+<MainScreen>:
+    MDFloatLayout:
+        md_bg_color: 0, 0, 0, 1
+        Image:
+            size_hint: None, 1.3
+            width: 170
+            source: app.logo_image
+            pos_hint: {"center_x": .25, "center_y":.95}
+        Image:
+            source: app.kapak_image
+            size_hint: .8, .8
+            pos_hint: {"center_x": .5, "center_y":.65}
+        MDLabel:
+            text: "H e l l o !"
+            font_name: app.BPoppins 
+            font_size: "23sp"
+            pos_hint: {"center_y": .38}
+            halign: "center"
+            color: rgba(255,255,255,255)
+        MDLabel:
+            text: "Best place to choose movies or series and share your comments about movies and series"
+            font_name: app.BPoppins 
+            font_size: "15sp"
+            size_hint_x: .85
+            pos_hint: {"center_y": .32, "center_x": .5}
+            halign: "center"
+            color: rgba(195,195,195,255)
+        Button:
+            text: "LOGIN"
+            size_hint: .55, .065
+            pos_hint: {"center_y": .24, "center_x": .5}
+            background_color: 1, 1, 1, 1  # Beyaz arka plan
+            background_normal: ""  # Varsayılan arka planı kaldırır
+            background_down: ""  # Tıklanma anındaki arka planı kaldırır
+            color: rgba(115, 16, 248, 255)  # Mor yazı rengi
+            font_name: app.BPoppins
+            font_size: "17sp"
+            
+
+        Button:
+            text:"SIGNUP"
+            size_hint: .55, .065
+            pos_hint: {"center_y": .15, "center_x": .5}
+            background_color: rgba(115, 16, 248, 255)
+            background_normal: ""  # Varsayılan arka planı kaldırır
+            background_down: "" 
+            font_name: app.BPoppins
+            font_size: "17sp"
+            color: rgba(255,255,255,255)
+            canvas.before:
+                Color:
+                    rgb: rgba(52,0,231,255)
+                    Line:
+                        width: 1.2
+                        rounded_rectangle: self.x , self.y, self.width, self.height, 5, 5, 5, 5, 100
